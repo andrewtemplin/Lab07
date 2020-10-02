@@ -25,9 +25,9 @@ public class ExamCalculations
 	{
 		Scanner scan = new Scanner(System.in);
 		DecimalFormat df = new DecimalFormat("#.##");
-		int score = 1;
+		int score = 0;
 		int count = 0;
-		int sum = 0;
+		double sum = 0;
 		int numOfA = 0;
 		int minScore = 101;
 		int maxScore = -1;
@@ -37,31 +37,30 @@ public class ExamCalculations
 
 		while (score != -1)
 		{
+		
+			score = scan.nextInt();
 
-			if (score != -1)
+			if (score >= 0 && score <= 100)
 			{
 				sum += score;
 				count++;
 			}
-			score = scan.nextInt();
 			if (score < 0 && score < -1 || score > 100)
 			{
 				System.out.println("Invalid input");
 			}
 
-			if (score > maxScore)
+			if (score > maxScore && score <= 100)
 			{
 				maxScore = score;
 			}
-			if (score < minScore)
+			if (score < minScore && score >= 0 )
 			{
 				minScore = score;
 			}
 
 			if (score >= 90 && score <= 100)
 			{
-				;
-				numOfA = numOfA + 1;
 				numOfA++;
 			}
 

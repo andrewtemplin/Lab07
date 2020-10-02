@@ -27,13 +27,15 @@ public class PrintTriangle
 
 		System.out.println("Please enter integer between 3 and 40: ");
 		rows = scan.nextInt();
+		if (rows > 40 || rows < 3) {
+			System.out.println("Invalid input, cannot create triangle");
+		}else
 		{
 			for (int x = 0; x < rows; x++)
 			{
 				for (int y = 0; y <= x; y++)
-					;
 				{
-					System.out.println("* ");
+					System.out.print("* ");
 				}
 				System.out.println("");
 			}
