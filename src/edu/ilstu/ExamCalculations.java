@@ -25,7 +25,7 @@ public class ExamCalculations
 	{
 		Scanner scan = new Scanner(System.in);
 		DecimalFormat df = new DecimalFormat("#.##");
-		int score = 0;
+		int score = 1;
 		int count = 0;
 		int sum = 0;
 		int numOfA = 0;
